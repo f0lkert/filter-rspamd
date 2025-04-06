@@ -515,7 +515,15 @@ func rspamdQuery(s *session, token string) {
 				"ARC-Seal",
 				"ARC-Message-Signature",
 				"ARC-Authentication-Results",
-				"Authentication-Results"}
+				"Authentication-Results",
+				"X-Spam",
+				"X-Spam-Status",
+				"X-Spam-Score",
+				"X-Spam-Level",
+				"X-Spamd-Result",
+				"X-Rspamd-Server",
+				"X-Rspamd-Action",
+			}
 
 			for _, h := range hdrs {
 				if authHeaders[h] != "" {
